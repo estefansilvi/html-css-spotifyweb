@@ -1,0 +1,93 @@
+/* utility rules */
+.fl {
+  float: left;
+}
+.colo-white {
+  color: #ffffff;
+}
+
+.bg-color-black{
+  background-color: #000000;
+}
+.bg-color-dimgrey{
+  background-color: #696969;
+}
+.bg-color-grey {
+  background-color: #2e2c2c;
+}
+.inline-block{
+  display: inline-block;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+
+}
+
+.sidebar {
+  width: 20%;
+  height: 100%;
+  background-color: green;
+  flex-direction: column;
+}
+.sidebar-loghi{
+  width: 100%;
+  height: 50%;
+  background-color: orange;
+}
+.sidebar-music{
+  width: 100%;
+  height: 50%;
+  background-color: red;
+}
+.container {
+  width: 80%;
+  height: 100%;
+  background-color: grey;
+}
+
+header {
+  width: 100%;
+  height: 90px;
+  display:flex;
+  justify-content: flex-end;
+}
+
+.upgrade {
+  height:90px;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+
+}
+.container .upgrade button{
+  font-size: 30px;
+  padding:10px;
+  border: 3px solid #ffffff;
+  border-radius: 50px ;
+  background-color: transparent;
+  position: absolute;
+  right:  20px;
+  top: 25px;
+  z-index: 1;
+}
+
+.bl-navbar {
+  width: 100%;
+  height: 80px;
+  border: 2px solid #fff;
+
+}
+main.album {
+  height:100%;
+  overflow-y: auto;
+  border: 2px solid #fff;
+}
+footer {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  bottom: 0;
+
+}
