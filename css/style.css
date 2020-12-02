@@ -1,13 +1,21 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
 /* utility rules */
 .fl {
   float: left;
 }
-.colo-white {
+.color-white {
   color: #ffffff;
 }
 
 .bg-color-black{
   background-color: #000000;
+}
+.bg-lightblack{
+  background-color: #0f0e0e;
 }
 .bg-color-dimgrey{
   background-color: #696969;
@@ -18,38 +26,110 @@
 .inline-block{
   display: inline-block;
 }
+.px-15{
+  padding-left:15px;
+  padding-right: 15px;
+}
+.py-15 {
+ padding-top: 15px;
+ padding-bottom: 15px;
+}
+.mx-15{
+  margin-left:15px;
+  margin-right: 15px;
+}
+.my-15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/* end utility rules */
+
 .wrapper {
   width: 100vw;
   height: 100vh;
   background-color: #000000;
 
 }
-
+.main-content{
+  height: calc(100% - 90px);
+  overflow: hidden;
+}
 .sidebar {
   width: 20%;
   height: 100%;
-  background-color: green;
   flex-direction: column;
 }
-.sidebar-loghi{
+.sidebar-option{
   width: 100%;
-  height: 50%;
-  background-color: orange;
+
 }
+.sidebar_options * {
+  color: white;
+}
+.sidebar-options img.logo{
+  width: 100px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.main-functionalities, .playlist {
+  padding:0;
+}
+.sidebar-options .main-functionalities li {
+  font-size: 20px;
+  list-style-type: none;
+  padding-bottom: 15px;
+}
+.sidebar-options .main-functionalities li img{
+  width: 30px;
+  vertical-align: middle;
+}
+.sidebar-options .main-functionalities li a  {
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left:1px;
+}
+
+.sidebar-playlist {
+  height: 40%;
+  overflow-y: auto;
+}
+.sidebar-playlist .playlist li {
+  font-size: 20px;
+  list-style-type: none;
+  padding-bottom: 15px;
+}
+
+.sidebar-playlist img.crea{
+  vertical-align: middle;
+    margin-top:20px;
+}
+.sidebar-playlist .playlist li img{
+  width: 30px;
+  vertical-align: middle;
+
+}
+.sidebar-playlist .playlist li a  {
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .sidebar-music{
   width: 100%;
   height: 50%;
-  background-color: red;
 }
 .container {
   width: 80%;
-  height: 100%;
+  height:100%;
+  overflow-y: auto;
   background-color: grey;
 }
 
 header {
   width: 100%;
-  height: 90px;
+  height: 100px;
   display:flex;
   justify-content: flex-end;
 }
@@ -59,10 +139,14 @@ header {
   display: flex;
   align-items: center;
   padding-right: 20px;
+  position: fixed;
+  top: 0;
+  right: 5%;
+
 
 }
 .container .upgrade button{
-  font-size: 30px;
+  font-size: 20px;
   padding:10px;
   border: 3px solid #ffffff;
   border-radius: 50px ;
@@ -76,18 +160,12 @@ header {
 .bl-navbar {
   width: 100%;
   height: 80px;
-  border: 2px solid #fff;
 
 }
-main.album {
-  height:100%;
-  overflow-y: auto;
-  border: 2px solid #fff;
+main.album{
+  height: 1000px;
 }
 footer {
   width: 100%;
-  height: 90px;
-  position: fixed;
-  bottom: 0;
-
+  height:90px;
 }
