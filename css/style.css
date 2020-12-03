@@ -197,8 +197,7 @@ header {
 }
 .bl-navbar ul li:hover{
   content:"";
-  height: 1px;
-  background-color: lightgreen;
+  border-bottom: 2px solid lightgreen;
 
 }
 
