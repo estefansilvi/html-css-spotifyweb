@@ -16,6 +16,9 @@
 .color-grey {
   color: #cccccc;
 }
+.color-lightgrey{
+  color: lightgrey;
+}
 .bg-color-white {
   background-color: #ffffff;
 }
@@ -31,7 +34,12 @@
 .bg-color-grey {
   background-color: #282828;
 }
-
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
 .block{
   display: block;
 }
@@ -70,28 +78,33 @@
   height: 100vh;
   max-width: 100vw;
   background-color: #000000;
-
+  font-family: 'PT Sans', sans-serif;
 }
-.main-content{
+
+
+.main-content {
   height: calc(100% - 90px);
   overflow: hidden;
 }
+
+
 .sidebar {
   width: 20%;
   height: 100%;
   flex-direction: column;
   z-index:2;
-
 }
-.sidebar-option{
+
+.sidebar-option {
   width: 100%;
   height: calc(100% - 80px);
   overflow: hidden;
-
 }
+
 .sidebar_options * {
   color: white;
 }
+
 .sidebar-options img.logo{
   width: 100px;
   margin-bottom: 25px;
@@ -101,72 +114,110 @@
 .main-functionalities, .playlist {
   padding:0;
 }
+
 .sidebar-options .main-functionalities li {
-  font-size: 15px;
+  font-size: 18px;
   list-style-type: none;
   padding-bottom: 15px;
 }
-.sidebar-options .main-functionalities li img{
+
+.sidebar-options .main-functionalities li img {
   width: 20px;
   vertical-align: middle;
 }
-.sidebar-options .main-functionalities li a  {
-  font-size: 10px;
+
+.sidebar-options .main-functionalities li a {
+  font-size: 15px;
   text-decoration: none;
   cursor: pointer;
   margin-left:1px;
 }
 
+.main-functionalities a:hover {
+  color:white;
+}
+
 .sidebar-playlist {
-  min-height: 400px;
+  width: 400px;
   overflow-y: auto;
 }
-.sidebar-playlist h3{
-  font-size:15px;
+
+.sidebar-playlist h2 {
+  cursor: pointer;
 }
+
+.sidebar-playlist .playlist h2:hover {
+  color:white;
+}
+
+.sidebar-playlist h3{
+  font-size:18px;
+  cursor: pointer;
+}
+
+.sidebar-playlist .playlist h3:hover {
+  color:white;
+}
+
 .sidebar-playlist .playlist li {
-  font-size: 10px;
+  font-size: 15px;
   list-style-type: none;
   padding-bottom: 15px;
 }
 
-.sidebar-playlist img.crea{
+.sidebar-playlist img.crea {
   width: 30px;
   vertical-align: middle;
-
+  cursor: pointer;
 }
 
-.sidebar-playlist .playlist li a  {
-  font-size: 10px;
+.sidebar-playlist .playlist li a {
+  font-size: 15px;
   text-decoration: none;
   cursor: pointer;
 }
 
-.sidebar-music{
+.sidebar-playlist .playlist a:hover {
+  color:white;
+}
+
+.sidebar-music {
   width:100%;
   height: 80px;
 }
-.sidebar-music img{
+
+.sidebar-music img {
   width: 20px;
   vertical-align: middle;
   margin-right: 10px;
 }
+
 .sidebar-music  a{
-  color:white;
   text-decoration: none;
 }
-.sidebar-music i.fa{
+.sidebar-music a:hover {
   color:white;
 }
-.sidebar-music-line{
+
+.sidebar-music h4:hover {
+  color:white;
+}
+
+.sidebar-music i.fa {
+  color:white;
+}
+
+.sidebar-music-line {
   border: 1px solid white;
 }
+
 .container {
   width: 80%;
   height:100%;
   overflow-y: auto;
   background-color: grey;
 }
+
 
 header {
   width: 100%;
@@ -187,9 +238,9 @@ header {
   right: 0;
   opacity: 0.4;
   background color: rgba(0, 0, 0, 0.5);
-
 }
-.container .upgrade button{
+
+.container .upgrade button {
   font-size: 15px;
   padding:10px;
   border: 3px solid #ffffff;
@@ -202,6 +253,10 @@ header {
   cursor: pointer;
 }
 
+ .upgrade button:hover {
+   transform: scale(1.1);
+ }
+
 .bl-navbar {
   width: 100%;
   height: 80px;
@@ -210,74 +265,179 @@ header {
   align-items: center;
 }
 
-.bl-navbar ul{
+.bl-navbar ul {
   list-style-type: none;
   cursor: pointer;
 }
-.bl-navbar ul li:hover{
-  content:"";
-  border-bottom: 2px solid lightgreen;
 
+.bl-navbar li:hover{
+  color: #ffffff;
+}
+
+.bl-navbar ul li.first:hover {
+  content:"";
+  border-bottom: 1px solid lightgreen;
 }
 
 
 
-main.album{
+main.album {
+  width: 100%;
   height: 1000px;
 }
+
+main.album .recently {
+  width: 100%;
+  display: flex;
+  flex-wrap:wrap;
+  margin-left:15px;
+}
+
+main.album .recently .album-content {
+  width: calc(100% / 6 - 15px);
+  margin-right: 15px;
+  margin-top: 15px;
+  max-width: 200px;
+}
+
+main.album img.img-1 {
+  width: 200px;
+  display: block;
+  cursor:pointer;
+}
+
+main.album img.img-2 {
+  display: none;
+  cursor: pointer;
+}
+
+main.album .heavy-metal:hover img.img-1 {
+  display:none;
+}
+
+div.heavy-metal {
+  position:relative;
+}
+
+main.album .heavy-metal:hover img.img-2 {
+  cursor: pointer;
+  width: 50px;
+  display: block;
+  opacity:0.8;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+
 footer {
   width: 100%;
   height:90px;
   display: flex;
   justify-content:space-around;
-
 }
 
-footer div.store,
+footer div.mini,
 footer div.volume {
-  height: 100%;
-  width:33%;
+  width:230px;
   display: flex;
   align-items: center;
 }
 
-div.store .cover-album img{
+div.mini .mini-album img {
   height: 50px;
+  cursor: pointer;
 }
-div.store .title h3 {
+
+div.mini .title h3 {
   font-size: 16px;
+  cursor: pointer;
 }
-div.store .title h4 {
+
+div.mini .title h4 {
   font-size: 12px;
+  cursor: pointer;
 }
+
+div.mini i {
+  cursor: pointer;
+}
+
 
 footer div.line-time {
-  height: 100%;
-  width: 33%;
+  width: calc(100% - 460px);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-footer div.line-time .line-time-control i.fa.fa-play-circle-o {
+.big {
   font-size: 25px;
   vertical-align: middle;
+}
+
+.line-time-control .big:hover {
+  transform: scale(1.2);
+}
+
+.line-time-control i {
+  cursor:pointer;
 }
 
 .line-player {
   content:"";
   height: 4px;
   width: 200px;
-  background:#ffffff;
+  background:#9e9f9f;
   position: relative;
   bottom: 5px;
   margin: 0 40px;
   border-radius: 10px;
-  vertical-align: 4px;
+  vertical-align:4px;
+  cursor: pointer;
 }
+
+.elapsed-time {
+  border:2px solid white;
+  width: 20%;
+  cursor:pointer;
+
+}
+.line-player .elapsed-time:hover {
+  content:"";
+  height: 4px;
+  width: 20%;
+  border:2px solid lightgreen;
+
+}
+.elapsed-time .point {
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  left:15%;
+  top: 50%;
+}
+.line-time-control:hover .point {
+  display: block;
+}
+
 
 footer div.volume {
   display: flex;
-  justify-content: flex-end;
-  font-size: 20px;
+  justify-content: flex-start;
+  font-size: 15px;
+  padding:15px;
+}
+footer div.volume .line-player {
+  width: 100px;
+  margin:0 5px;
+}
+
+div.volume i{
+  cursor: pointer;
 }
