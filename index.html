@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -10,47 +12,55 @@
   <body>
     <div class="wrapper ">
       <div class="main-content">
+
+        <!-- sidebar -->
         <div class="sidebar bg-color-black fl ">
-          <div class="sidebar-options px-15 py-15">
+          <div class="sidebar-options  px-15 py-15">
             <img  class="logo" src="img/logo.svg" alt="">
-            <ul class="main-functionalities  ">
-              <li class=""><img class="inline-block" src="img/home.svg" alt=""><a class="inline-block color-white" href="#">Home</a></li>
-              <li><img class="inline-block" src="img/search.svg" alt=""><a class="inline-block color-white" href="#">Search</a></li>
-              <li><img class="inline-block" src="img/libreria.svg" alt=""><a class="inline-block color-white" href="#">La nostra libreria</a></li>
+            <ul class="main-functionalities color-lightgrey  ">
+              <li class=""><img class="inline-block" src="img/home.svg" alt=""><a class="inline-block color-lightgrey" href="#">Home</a></li>
+              <li><img class="inline-block" src="img/search.svg" alt=""><a class="inline-block color-lightgrey" href="#">Search</a></li>
+              <li><img class="inline-block" src="img/libreria.svg" alt=""><a class="inline-block color-lightgrey" href="#">La nostra libreria</a></li>
             </ul>
-            <div class="sidebar-playlist  py-15 color-white">
-                <i class="fa fa-thumbs-up"></i>
-              <h2 class="my-15">Palylist</h2>
+            <div class="sidebar-playlist  py-15 ">
+              <h2 class=" color-lightgrey my-15">Palylist</h2>
               <img  class="crea inline-block " src="img/nuovaplay.jpg" alt="">
-              <h3 class="inline-block">Crea Plalist</h3>
-              <ul class="playlist ">
-                <li><a class="inline-block color-white margin-t " href="#">Nuova Playlist</a></li>
-                <li><a class="inline-block color-white margin-t" href="#">Nuova Playlist</a></li>
-                <li><a class="inline-block color-white margin-t" href="#">Nuova Playlist</a></li>
-                <li><a class="inline-block color-white margin-t" href="#">Nuova Playlist</a></li>
-                <li><a class="inline-block color-white margin-t" href="#">Nuova Playlist</a></li>
-                <li><a class="inline-block color-white margin-t" href="#">Nuova Playlist</a></li>
-                <li><a class="inline-block color-white margin-t" href="#">Nuova Playlist</a></li>
+              <h3 class=" color-lightgrey inline-block">Crea Plalist</h3>
+              <ul class="playlist  ">
+                <li><a class="inline-block color-lightgrey margin-t " href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t" href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t" href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t" href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t" href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t" href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t" href="#">Nuova Playlist</a></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-music bg-color-black px-15 py-15">
-              <a href="#"><img class="inline-block" src="img/download.svg" alt="">Installa App</a>
+              <a class="color-lightgrey" href="#"><img class="inline-block" src="img/download.svg" alt="">Installa App</a>
               <div class="sidebar-music-line my-15 ">
               </div>
-              <h4 class="color-white"><img class="inline-block" src="img/profile.svg" alt="">Jonh Doe</h4>
+              <h4 class="color-lightgrey"><img class="inline-block" src="img/profile.svg" alt="">Jonh Doe</h4>
           </div>
         </div>
+        <!-- end sidebar -->
+
         <div class=" container fl">
+
+          <!-- header -->
           <header class="bg-lightblack">
             <div class="upgrade bg-color-black ">
               <button class="color-white"type="button" name="button">Effettua l'upgrade</button>
             </div>
           </header>
+          <!-- end header -->
+
+          <!-- navbar -->
           <div class="bl-navbar bg-color-dimgrey color-grey">
             <ul class="text-center">
-              <li class="inline-block px-15">IN EVIDENZA</li>
+              <li class="first inline-block px-15">IN EVIDENZA</li>
               <li class="inline-block px-15">PODCAST</li>
               <li class="inline-block px-15">CLASSIFICHE</li>
               <li class="inline-block px-15">GENERI E MOOD</li>
@@ -58,13 +68,63 @@
               <li class="inline-block px-15">SCOPRI</li>
             </ul>
           </div>
-          <main class="album bg-color-dimgrey">
+          <!--end navbar -->
+
+          <!-- main album -->
+          <main class="album bg-color-dimgrey color-white px-15 py-15">
+            <h1 class="text-left my-15">Recently played</h1>
+            <div class="recently text-center">
+              <div class="album-content ">
+                <img class="img-1" src="img/heavy.jpg" alt="">
+                <img class="img-2"src="img/play.png" alt="">
+                <h3>Heavy Metal</h3>
+                <h4 class="color-grey">Subtitle</h4>
+              </div>
+              <div class="album-content">
+                <img class="img-1" src="img/stranger.jpeg" alt="">
+                <img class="img-2"src="img/play.png" alt="">
+                <h3>Stranger Things, Vol.1 <br>
+                  ( a Netflix Original Series <br>
+                  Soundtrack)</h3>
+                <h4 class="color-grey">Kyle Dixon & Mchael Stein</h4>
+              </div>
+              <div class="album-content">
+                <img class="img-1" src="img/aquietplace.jpeg" alt="">
+                <img class="img-2"src="img/play.png" alt="">
+                <h3>A Quiet Place</h3>
+                <h4 class="color-grey">Subtitle</h4>
+              </div>
+              <div class="album-content">
+                <img class="img-1" src="img/split.jpeg" alt="">
+                <img class="img-2"src="img/play.png" alt="">
+                <h3>Split</h3>
+                <h4 class="color-grey">Subtitle</h4>
+              </div>
+              <div class="album-content">
+                <img class="img-1" src="img/cure.jpeg" alt="">
+                <img class="img-2"src="img/play.png" alt="">
+                <h3>A cure for wellness</h3>
+                <h4 class="color-grey">Subtitle</h4>
+              </div>
+              <div class="album-content">
+                <img class="img-1" src="img/sinister.jpeg" alt="">
+                <img class="img-2"src="img/play.png" alt="">
+                <h3>A cure for wellness</h3>
+                <h4 class="color-grey">Subtitle</h4>
+              </div>
+           </div>
           </main>
+          <!--end main album -->
+
         </div>
       </div>
+
+        <!--footer -->
         <footer class="bg-color-grey color-white">
-          <div class="store">
-            <div class="cover-album mx-15">
+
+          <!-- mini album -->
+          <div class="mini text-center">
+            <div class="mini-album mx-15">
               <img src="img/sinister.jpeg" alt="">
             </div>
             <div class="title margin-r-30">
@@ -76,31 +136,44 @@
                 <i class="fa fa-folder-o" aria-hidden="true"></i>
             </div>
           </div>
-          <div class="line-time ">
+          <!-- end mini album -->
+
+          <!-- line-time -->
+          <div class="line-time text-center ">
             <div class="line-time-control  my-15">
               <i class="fa fa-random mx-15" aria-hidden="true"></i>
               <i class="fa fa-step-backward mx-15" aria-hidden="true"></i>
-              <i class="fa fa-play-circle-o mx-15" aria-hidden="true"></i>
+              <i class="fa fa-play-circle-o big mx-15" aria-hidden="true"></i>
               <i class="fa fa-step-forward mx-15" aria-hidden="true"></i>
               <i class="fa fa-repeat mx-15" aria-hidden="true"></i>
               <br>
               <br>
               <span>0.25</span>
               <div class="line-player inline-block">
-
+                <div class="elapsed-time">
+                  <div class="point"> </div>
+                </div>
               </div>
               <span>4.35</span>
             </div>
           </div>
+          <!-- end line-time -->
+
+          <!-- gestione volume -->
           <div class="volume">
             <i class="fa fa-play-list mx-15" aria-hidden="true"></i>
             <i class="fa fa-television mx-15" aria-hidden="true"></i>
             <i class="fa fa-volume-up mx-15" aria-hidden="true"></i>
             <div class="line-player inline-block">
-
+              <div class="elapsed-time">
+              </div>
             </div>
           </div>
+          <!-- end gestione volume -->
+
         </footer>
+        <!--end footer -->
+
     </div>
   </body>
 </html>
