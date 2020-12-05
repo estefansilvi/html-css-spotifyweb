@@ -99,7 +99,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index:2;
 }
 
 .sidebar-option {
@@ -107,16 +106,24 @@
   overflow: hidden;
 }
 
-.sidebar_options * {
+.sidebar-options {
+  height: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-options * {
   color: white;
 }
 
-.sidebar-options img.logo{
+.sidebar-options img.logo {
   width: 100px;
   margin-bottom: 25px;
   cursor: pointer;
 }
-
+.logo-small {
+  display: none;
+}
 .sidebar-options img.logo:hover {
   transform: scale(1.2);
 }
@@ -147,8 +154,12 @@
 }
 
 .sidebar-playlist {
-  width: 400px;
   overflow-y: auto;
+}
+
+.sidebar-playlist ul.playlist {
+  width: 100%;
+
 }
 
 .sidebar-playlist h2 {
@@ -242,6 +253,7 @@ header {
 }
 
 .upgrade {
+
   width: 80%;
   height:100px;
   float:right;
@@ -253,9 +265,13 @@ header {
   right: 0;
   opacity: 0.4;
   background color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
-.container .upgrade button {
+.container .upgrade-button {
+  position: fixed;
+  top: 0;
+  right: 0;
   font-size: 15px;
   padding:10px;
   border: 3px solid #ffffff;
@@ -264,7 +280,7 @@ header {
   position: absolute;
   right:  30px;
   top: 25px;
-  z-index: 1;
+  z-index: 4;
   cursor: pointer;
 }
 
@@ -284,7 +300,9 @@ header {
   list-style-type: none;
   cursor: pointer;
 }
-
+.bl-navbar li {
+  font-size: 15px;
+}
 .bl-navbar li:hover{
   color: #ffffff;
 }
@@ -318,7 +336,7 @@ main.album {
   position: relative;
 }
  .cover img.img-1 {
-  width: 200px;
+  width: 100%;
   display: block;
   margin-bottom:15px;
   cursor:pointer;
@@ -391,9 +409,13 @@ footer {
   justify-content:space-around;
 }
 
-footer div.mini,
+footer div.mini {
+  width:20%;
+  display: flex;
+  align-items: center;
+}
 footer div.volume {
-  width:230px;
+  width:20%;
   display: flex;
   align-items: center;
 }
@@ -419,7 +441,7 @@ div.mini i {
 
 
 footer div.line-time {
-  width: calc(100% - 460px);
+  width: calc(100% - 40%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -444,13 +466,15 @@ footer div.line-time {
   width: 200px;
   background:#9e9f9f;
   position: relative;
-  bottom: 5px;
   margin: 0 40px;
   border-radius: 10px;
-  vertical-align:4px;
   cursor: pointer;
 }
 
+.timeline {
+  display: flex;
+  align-items: center;
+}
 .elapsed-time {
   border:2px solid white;
   width: 20%;
@@ -495,12 +519,23 @@ div.volume i{
   cursor: pointer;
 }
 
-
+.hidden-mobile {
+  display: block;
+}
 
 @media (max-width: 991px) {
   .recently-played .recently .album-content {
     width: calc(100% / 4 - 15px);
     margin:15px;
+  }
+  .hidden-mobile {
+    display: block;
+  }
+  .bl-navbar li{
+    font-size:18px;
+    padding-left:10px;
+    padding-right: 10px;
+    margin-bottom:15px;
   }
  }
 
@@ -509,6 +544,24 @@ div.volume i{
  @media (max-width: 767px) {
    .recently-played .recently .album-content {
      width: calc(100% / 2 - 15px);
+   }
+   .hidden-mobile {
+     display: block;
+   }
+   .bl-navbar li{
+     font-size:13px;
+     padding-left:5px;
+     padding-right: 5px;
+     margin-bottom:15px;
+   }
+   footer div.mini,
+   footer div.volume {
+     width:130px;
+     display: flex;
+     align-items: center;
+   }
+   footer div.line-time {
+     width: calc(100% - 260px);
    }
  }
 
@@ -519,5 +572,67 @@ div.volume i{
     width: calc(100% / 2 - 15px);
   }
 
+  .hidden-mobile {
+    display: none;
+  }
+  .sidebar-music a,
+  .sidebar-music h4{
+    display: none;
+  }
 
+  .logo-small{
+    display: block;
+    width: 30px;
+    margin-bottom: 25px;
+    cursor: pointer;
+  }
+
+  div.mini .mini-album img {
+    height: 30px;
+    cursor: pointer;
+  }
+
+  div.mini .title h3 {
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  div.mini .title h4 {
+    font-size: 10px;
+    cursor: pointer;
+  }
+  .big {
+    font-size: 25px;
+    vertical-align: middle;
+  }
+
+  .line-time-control .big:hover {
+    transform: scale(1.2);
+  }
+
+  .line-time-control i {
+    cursor:pointer;
+  }
+
+  .line-player {
+    content:"";
+    height: 4px;
+    width: 100px;
+    background:#9e9f9f;
+    position: relative;
+    margin: 0 40px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .timeline {
+    display: flex;
+    align-items: center;
+  }
+  .elapsed-time {
+    border:2px solid white;
+    width: 20%;
+    cursor:pointer;
+
+  }
 }
