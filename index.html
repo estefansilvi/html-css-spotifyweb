@@ -16,33 +16,34 @@
         <!-- sidebar -->
         <div class="sidebar bg-color-black fl ">
           <div class="sidebar-options  px-15 py-15">
-            <img  class="logo" src="img/logo.svg" alt="">
+            <img  class="logo hidden-mobile" src="img/logo.svg" alt="">
+            <img class="logo-small" src="img/logo-small.svg" alt="">
             <ul class="main-functionalities color-lightgrey  ">
-              <li class=""><img class="inline-block" src="img/home.svg" alt=""><a class="inline-block color-lightgrey" href="#">Home</a></li>
-              <li><img class="inline-block" src="img/search.svg" alt=""><a class="inline-block color-lightgrey" href="#">Search</a></li>
-              <li><img class="inline-block" src="img/libreria.svg" alt=""><a class="inline-block color-lightgrey" href="#">La nostra libreria</a></li>
+              <li class=""><img class="inline-block" src="img/home.svg" alt=""><a class="inline-block color-lightgrey hidden-mobile" href="#">Home</a></li>
+              <li><img class="inline-block" src="img/search.svg" alt=""><a class="inline-block color-lightgrey hidden-mobile" href="#">Search</a></li>
+              <li><img class="inline-block" src="img/libreria.svg" alt=""><a class="inline-block color-lightgrey hidden-mobile" href="#">La nostra libreria</a></li>
             </ul>
             <div class="sidebar-playlist  py-15 ">
-              <h2 class=" color-white my-15">Palylist</h2>
+              <h2 class=" color-white my-15 hidden-mobile">Playlist</h2>
               <img  class="crea inline-block " src="img/nuovaplay.jpg" alt="">
-              <h3 class=" color-lightgrey inline-block">Crea Plalist</h3>
+              <h3 class=" color-lightgrey inline-block hidden-mobile">Crea Playlist</h3>
               <ul class="playlist  ">
-                <li><a class="inline-block color-lightgrey margin-t " href="#">Nuova Playlist</a></li>
-                <li><a class="inline-block color-lightgrey margin-t" href="#">Nuova Playlist</a></li>
-                <li><a class="inline-block color-lightgrey margin-t" href="#">Nuova Playlist</a></li>
-                <li><a class="inline-block color-lightgrey margin-t" href="#">Nuova Playlist</a></li>
-                <li><a class="inline-block color-lightgrey margin-t" href="#">Nuova Playlist</a></li>
-                <li><a class="inline-block color-lightgrey margin-t" href="#">Nuova Playlist</a></li>
-                <li><a class="inline-block color-lightgrey margin-t" href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t hidden-mobile " href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t hidden-mobile" href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t hidden-mobile" href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t hidden-mobile" href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t hidden-mobile" href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t hidden-mobile" href="#">Nuova Playlist</a></li>
+                <li><a class="inline-block color-lightgrey margin-t hidden-mobile" href="#">Nuova Playlist</a></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-music bg-color-black my-30 px-15 px-15">
-              <a class="color-lightgrey" href="#"><img class="inline-block" src="img/download.svg" alt="">Installa App</a>
+              <img class="inline-block" src="img/download.svg" alt=""><a class="color-lightgrey inline-block" href="#">Installa App</a>
               <div class="sidebar-music-line my-15 ">
               </div>
-              <h4 class="color-lightgrey"><img class="inline-block" src="img/profile.svg" alt="">Jonh Doe</h4>
+              <img class="inline-block" src="img/profile.svg" alt=""><h4 class="color-lightgrey inline-block ">Jonh Doe</h4>
           </div>
         </div>
         <!-- end sidebar -->
@@ -52,8 +53,9 @@
           <!-- header -->
           <header class="bg-lightblack">
             <div class="upgrade bg-color-black ">
-              <button class="color-white"type="button" name="button">Effettua l'upgrade</button>
+
             </div>
+            <button class=" upgrade-button color-white"type="button" name="button">Effettua l'upgrade</button>
           </header>
           <!-- end header -->
 
@@ -220,13 +222,15 @@
               <i class="fa fa-repeat mx-15" aria-hidden="true"></i>
               <br>
               <br>
-              <span>0.25</span>
-              <div class="line-player inline-block">
-                <div class="elapsed-time">
-                  <div class="point"> </div>
+              <div class="timeline">
+                <span>0.25</span>
+                <div class="line-player inline-block">
+                  <div class="elapsed-time">
+                    <div class="point"> </div>
+                  </div>
                 </div>
+                <span>4.35</span>
               </div>
-              <span>4.35</span>
             </div>
           </div>
           <!-- end line-time -->
